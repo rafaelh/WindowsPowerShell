@@ -16,8 +16,13 @@ function touch {
 
 new-alias grep Select-String
 
+function apache {
+	set-location "C:\Users\$env:USERNAME\AppData\Roaming\Apache24"
+}
 
-
+function Documents {
+	set-location "C:\Users\$env:USERNAME\Documents"
+}
 
 # To Test
 function adminprocess {
