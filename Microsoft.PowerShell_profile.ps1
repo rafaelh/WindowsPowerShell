@@ -4,7 +4,7 @@
 set-location C:\Users\$env:USERNAME\Dropbox\Computers\Projects
 
 # For Python
-setx BETTER_EXCEPTIONS 1
+$BETTER_EXCEPTIONS = 1
 
 # Make powershell more like bash
 function env {
