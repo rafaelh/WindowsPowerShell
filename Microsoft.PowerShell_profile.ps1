@@ -38,8 +38,6 @@ function adminprocess {
 }
 
 
-
-
 function reloadpath {
 	$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 }
@@ -54,5 +52,5 @@ if (Test-Path($ChocolateyProfile)) {
 set-alias notepad "C:\Program Files\Notepad++\notepad++.exe"
 set-alias zip "C:\Program Files\7-Zip\7z.exe"
 
-
+Import-Module posh-git
 
