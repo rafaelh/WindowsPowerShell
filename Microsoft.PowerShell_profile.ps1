@@ -1,36 +1,31 @@
 # %USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
+# Shell Variables
 [console]::backgroundcolor = [ConsoleColor]::Black
-set-location C:\Users\$env:USERNAME\Dropbox\Computers\Projects
-
-# For Python
 $BETTER_EXCEPTIONS = 1
 
 # Make powershell more like bash
-function env {
-	Get-ChildItem Env:"$args"
-}
-
-function touch {
-  New-Item "$args" -ItemType File
-}
-
+function env {Get-ChildItem Env:"$args"}
+function touch {New-Item "$args" -ItemType File}
 new-alias grep Select-String
 
-function apache {
-	set-location "C:\Users\$env:USERNAME\AppData\Roaming\Apache24"
-}
 
+# Quick change directories & programs
 function projects {
 	set-location "C:\Users\$env:USERNAME\Dropbox\Computers\Projects"
 }
-function Documents {
+
+function documents {
 	set-location "C:\Users\$env:USERNAME\Documents"
 }
 
-function version {
-	$PSVersionTable.PSVersion
+function dropbox {
+	set-location "C:\Users\$env:USERNAME\Dropbox"
 }
+
+set-alias notepad "C:\Program Files\Notepad++\notepad++.exe"
+set-alias zip "C:\Program Files\7-Zip\7z.exe"
+
 
 # To Test
 function adminprocess {
@@ -38,19 +33,11 @@ function adminprocess {
 }
 
 
-function reloadpath {
-	$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
-}
-
-
-# Chocolatey profile
+# Run before starting prompt
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
-set-alias notepad "C:\Program Files\Notepad++\notepad++.exe"
-set-alias zip "C:\Program Files\7-Zip\7z.exe"
-
 Import-Module posh-git
-
+set-location C:\Users\$env:USERNAME\Dropbox\Computers\Projects
