@@ -43,4 +43,6 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 Import-Module posh-git
+Import-Module oh-my-posh
+
 set-location C:\Users\$env:USERNAME\Dropbox\Computers\Projects
