@@ -4,7 +4,7 @@
 # Shell Variables
 [console]::backgroundcolor = [ConsoleColor]::Black
 $BETTER_EXCEPTIONS = 1
-
+$DEFAULTUSER = 'rafae'
 
 # Make powershell more like bash
 function env {Get-ChildItem Env:"$args"}
