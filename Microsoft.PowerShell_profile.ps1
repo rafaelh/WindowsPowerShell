@@ -1,6 +1,5 @@
 # %USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
-
 # Shell Variables
 [console]::backgroundcolor = [ConsoleColor]::Black
 $BETTER_EXCEPTIONS = 1
@@ -15,26 +14,17 @@ new-alias grep Select-String
 
 
 # Quick change directories & programs
-function projects {
-	set-location "C:\Users\$env:USERNAME\Dropbox\Computers\Projects"
-}
-
-function documents {
-	set-location "C:\Users\$env:USERNAME\Documents"
-}
-
-function dropbox {
-	set-location "C:\Users\$env:USERNAME\Dropbox"
-}
+function projects {set-location "C:\Users\$env:USERNAME\Dropbox\Computers\Projects"}
+function documents {set-location "C:\Users\$env:USERNAME\Documents"}
+function dropbox {set-location "C:\Users\$env:USERNAME\Dropbox"}
+function profile {set-location "C:\Users\$env:USERNAME\Documents\PowerShell"}
 
 set-alias notepad "C:\Program Files\Notepad++\notepad++.exe"
 set-alias zip "C:\Program Files\7-Zip\7z.exe"
 
 
 # To Test
-function adminprocess {
-	Start-Process cmd -Verb RunAs
-}
+function sudo {Start-Process cmd -Verb RunAs}
 
 
 # Run before starting prompt
