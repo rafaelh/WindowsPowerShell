@@ -14,9 +14,10 @@ new-alias grep Select-String
 
 
 # Quick change directories & programs
-function projects {set-location "C:\Users\$env:USERNAME\Dropbox\Computers\Projects"}
+function computers {set-location "C:\Users\$env:USERNAME\Dropbox\Computers\Projects"}
 function documents {set-location "C:\Users\$env:USERNAME\Documents"}
 function dropbox {set-location "C:\Users\$env:USERNAME\Dropbox"}
+function gdrive {set-location "C:\Users\$env:USERNAME\Google/ Drive"}
 function profile {set-location "C:\Users\$env:USERNAME\Documents\PowerShell"}
 
 set-alias notepad "C:\Program Files\Notepad++\notepad++.exe"
@@ -36,4 +37,4 @@ if (Test-Path($ChocolateyProfile)) {
 Import-Module posh-git
 Import-Module oh-my-posh
 
-set-location C:\Users\$env:USERNAME\Dropbox\Computers\Projects
+set-location C:\Users\$env:USERNAME\Documents
