@@ -2,8 +2,8 @@
 
 # Shell Variables
 [console]::backgroundcolor = [ConsoleColor]::Black
-$BETTER_EXCEPTIONS = 1
 $DEFAULTUSER = $env:USERNAME
+$POWERSHELL_TELEMETRY_OPTOUT = 1
 
 
 # Make powershell more like bash
